@@ -7,8 +7,8 @@
 ###	Create a Timechart with Number of Drop frame in the past 48 hours
 index=esx earliest=-48h process=vmkwarning FRAME DROP event has been observed | timechart dc(host) as host_count
 
-### Daily event count
-index=esx earliest="11/30/2014:00:00:00" latest="12/09/2014:00:00:00"  host syslog.bbh.com:1514 become unreachable | timechart span=1d count
+### Daily event count when syslog is unavailable
+index=esx earliest="11/30/2014:00:00:00" latest="12/09/2014:00:00:00"  host syslog.example.com:1514 become unreachable | timechart span=1d count
 
 ### Regular Expression
 index=esx deteriorated | regex _raw="to \d{3,}"
