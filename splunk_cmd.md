@@ -13,7 +13,7 @@ index=esx earliest="11/30/2014:00:00:00" latest="12/09/2014:00:00:00"  host sysl
 ### Regular Expression
 index=esx deteriorated | regex _raw="to \d{3,}"
 
-### Date ranage
+### Date range
 earliest="12/14/2014:00:00:00" latest="12/14/2014:00:00:00"
 
 ##	Linux - dsmsched.log
