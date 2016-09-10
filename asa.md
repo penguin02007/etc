@@ -4,10 +4,7 @@
 ```
 openssl req -new -key vpn.hydesquare.org.key -out vpn.request.csr
 ```
-
-2. Once you received the certificate, you need to export the file to stan
-```
-## Export the new certificate from x.509 to PKCS12 archive (Only ASA can accept)
+2. Once you received the certificate, you need to export the new certificate from x.509 to PKCS12 archive (Only ASA can accept)
 ```
 openssl pkcs12 -export -out example_com.p12 -inkey example_com.key -in example_com.crt -certfile AddTrustExternalCARoot.crt
 ```
@@ -20,7 +17,7 @@ Click Configuration, and then click Device Management.
 Expand Advanced, and then expand SSL Settings.
 Under Certificates, select the interface that is used to terminate WebVPN sessions. ...
 Click Edit.
-In the Certificate drop-down list, choose the certificate installed in Step 4.
+In the Certificate drop-down list, choose the certificate installed in Step 3.
 
 ## Resources
 1. Show certificates or trustpoints
