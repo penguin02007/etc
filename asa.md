@@ -11,6 +11,7 @@ openssl pkcs12 -export -out example_com.p12 -inkey example_com.key -in example_c
 #### 3. Add certificate via ADSM.
 1. In ADSM, Click Configuration, Certificate Management then Identity Certificates.
 2. Click Add, enter TrustpointName, Passphrase and .p12 file.
+
 #### 4. Update interface with the new certificate.
 1. Click Configuration, and then click Device Management.
 2. Expand Advanced, and then expand SSL Settings.
