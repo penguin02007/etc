@@ -3,12 +3,14 @@
 1. Generate Certificate Signing request (CSR) and submit to CA
 ```
 openssl req -new -key vpn.hydesquare.org.key -out vpn.request.csr
+```
 
 2. Once you received the certificate, you need to export the file to stan
 ```
 ## Export the new certificate from x.509 to PKCS12 archive (Only ASA can accept)
+```
 openssl pkcs12 -export -out example_com.p12 -inkey example_com.key -in example_com.crt -certfile AddTrustExternalCARoot.crt
-
+```
 3. Add certificate via ADSM.
 In ADSM, Click Configuration, Certificate Management then Identity Certificates.
 Click Add, enter TrustpointName, Passphrase and .p12 file.
