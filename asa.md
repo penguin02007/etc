@@ -30,4 +30,4 @@ sh cry ca trustpoints
 sh cry key zeroize RSA label ASDM_TrustPoint6
 ```
 #### 3. http://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/107956-renew-ssl.html
-### 4. http://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/98596-asa-8-x-3rdpartyvendorcert.html
+#### 4. http://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/98596-asa-8-x-3rdpartyvendorcert.html
