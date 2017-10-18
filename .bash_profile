@@ -49,3 +49,8 @@ alias ll='ls -alF'
 alias gogit='cd ~/Documents/github/penguin02007'
 alias gst='git status'
 alias gdi='git diff'
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
