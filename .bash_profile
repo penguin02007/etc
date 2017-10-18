@@ -1,4 +1,4 @@
-PS1="\e[0;36m\!\e[m|\e[0;33m\u\e[m@\e[0;32m$(uname -n):\W\e[m\$ "
+PS1="\[\e[32m\][\[\e[m\]\[\e[0;36m\!\e[m|\\e[36m\](¬_¬)\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[31m\]\h\[\e[m\]:\[\e[32m\]\W\[\e[m\]\[\e[32m\]]\[\e[m\]\[\\]\\$\[\] "
 # Author: Eli Fatsi
 # https://www.viget.com/articles/create-a-github-repo-from-the-command-line
 github-create() {
@@ -40,3 +40,12 @@ github-create() {
  git push -u origin master > /dev/null 2>&1
  echo " done."
 }
+export PATH=/usr/local/bin:$PATH
+if [ -f /usr/local/bin/subl ]
+  then
+    ln -s '/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/sbl' /usr/local/bin/subl
+fi
+alias ll='ls -alF'
+alias gogit='cd ~/Documents/github/penguin02007'
+alias gst='git status'
+alias gdi='git diff'
