@@ -40,17 +40,18 @@ github-create() {
  git push -u origin master > /dev/null 2>&1
  echo " done."
 }
-export PATH=/usr/local/bin:$PATH
-if [ -f /usr/local/bin/subl ]
-  then
-    ln -s '/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/sbl' /usr/local/bin/subl
+
+subl_link=/usr/local/bin/subl
+subl_bin=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
+if [ ! -f "$subl_link" ] && [ -f "$subl_bin" ]; then
+    ln -s "$subl_bin" "$subl_link"
 fi
 alias ll='ls -alF'
 alias gogit='cd ~/Documents/github/penguin02007'
 alias gst='git status'
 alias gdi='git diff'
-
-# Get the aliases and functions
+export PATH=/usr/local/bin:$PATH
+# Get aliases and functions
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
