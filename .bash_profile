@@ -1,4 +1,4 @@
-PS1="\[\e[32m\][\[\e[m\]\[\e[0;36m\!\e[m|\\e[36m\](¬_¬)\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[31m\]\h\[\e[m\]:\[\e[32m\]\W\[\e[m\]\[\e[32m\]]\[\e[m\]\[\\]\\$\[\] "
+PS1='\[[\!|\u@\h:\W]\]'
 # Author: Eli Fatsi
 # https://www.viget.com/articles/create-a-github-repo-from-the-command-line
 github-create() {
