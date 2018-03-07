@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function docker {
+function install-docker {
   apt-get install -y \
   apt-transport-https ca-certificates curl software-properties-com \
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -12,10 +12,17 @@ function docker {
   apt-get install docker-ce -y
 }
 
-function puppet {
+function install-puppet {
+  curl https://apt.puppetlabs.com/puppet5-release-xenial.deb \
+  -o /tmp/puppet5-release-xenial.deb
+  apt-get install /tmp/puppet5-release-xenial.deb
+  apt-get update && apt-get install aptitude -y
+  apt-cache show puppet-agent|grep -i 'puppet\s5' >>/dev/null && apt-get install ruby puppet-agent -y
   /opt/puppetlabs/puppet/bin/gem install r10k hiera-eyaml
-  apt-get -y \
-  install rsync curl wget git \
+  apt-get install -y rsync curl wget git
+}
+
+function install-quartermaster {
   curl -o /etc/puppetlabs/code/environments/production/Puppetfile \
   https://raw.githubusercontent.com/ppouliot/puppet-quartermaster/master/Puppetfile
   curl -o  /etc/puppetlabs/puppet/hiera.yaml \
